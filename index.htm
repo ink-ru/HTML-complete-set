@@ -5,216 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting to index.html</title>
     <meta http-equiv="refresh" content="30;url=index.html">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #fdbb2d;
-        }
-        
-        h2 {
-            font-size: 1.8rem;
-            margin: 25px 0 15px;
-            color: #4fc3f7;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .info-box {
-            background: rgba(255, 255, 255, 0.1);
-            border-left: 5px solid #fdbb2d;
-            padding: 15px;
-            margin: 25px 0;
-            text-align: left;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .redirect-button {
-            display: inline-block;
-            background: #fdbb2d;
-            color: #1a2a6c;
-            padding: 12px 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(253, 187, 45, 0.4);
-        }
-        
-        .redirect-button:hover {
-            background: #ffcc44;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(253, 187, 45, 0.6);
-        }
-        
-        .countdown {
-            font-size: 1.5rem;
-            margin: 20px 0;
-            color: #fdbb2d;
-            font-weight: bold;
-        }
-        
-        .reason-list {
-            text-align: left;
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        
-        .reason-list li {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .server-info {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .js-notice {
-            display: none;
-            background: rgba(79, 195, 247, 0.2);
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-size: 0.9rem;
-        }
-        
-        /* JS disabled block styles */
-        .js-disabled {
-            background: rgba(178, 31, 31, 0.3);
-            border: 2px solid #b21f1f;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            text-align: left;
-        }
-        
-        .js-disabled h3 {
-            color: #ff6b6b;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Redirect Notice</h1>
+        <div class="row">
+            <div class="twelve columns">
+                <div style="margin-top: 10%">
+                    <h1>Redirect Notice</h1>
 
-        <!-- JS Disabled Block - visible by default, hidden by JavaScript -->
-        <div class="js-disabled" id="jsDisabled">
-            <h3>JavaScript is Disabled</h3>
-            <p>You're seeing this message because JavaScript is disabled in your browser. The page will redirect using the fallback method in 30 seconds.</p>
-            <p>For a better experience with a visual countdown timer, please enable JavaScript.</p>
-        </div>
+                    <div class="js-disabled" id="jsDisabled">
+                        <h3>JavaScript is Disabled</h3>
+                        <p>You're seeing this message because JavaScript is disabled in your browser. The page will redirect using the fallback method in 30 seconds.</p>
+                        <p>For a better experience with a visual countdown timer, please enable JavaScript.</p>
+                    </div>
 
-        <p>You are seeing this page because the web server, you're connecting to, may be using outdated configuration that doesn't properly handle default HTML index files.</p>
-        
-        <div class="info-box">
-            <h2>Why .htm Extensions Are Deprecated</h2>
-            <p>The three-letter <strong>.htm</strong> file extension is a legacy from early computing systems that had limitations on file extension length (like DOS with its 8.3 filename convention).</p>
-            
-            <ul class="reason-list">
-                <li><strong>Server Configuration:</strong> Modern web servers are typically configured to prioritize .html files</li>
-                <li><strong>Modern Standards:</strong> Current web standards favor the four-letter <strong>.html</strong> extension</li>
-                <li><strong>Clarity:</strong> .html more clearly indicates the file type as HyperText Markup Language</li>
-            </ul>
-        </div>
-        
-        <a href="index.html" class="redirect-button">Go to index.html manually</a>
-        
-        <div class="server-info">
-            <p>This page will redirect automaticaly.</p>
-            <div class="countdown" id="countdown">Redirecting in 30 seconds...</div>
-        </div>
+                    <p>
+                        You are seeing this page because the web server you're connecting to may be using outdated configuration that doesn't properly handle default HTML index files.
+                    </p>
 
+                    <div class="info-box">
+                        <h2>Why .htm Extensions Are Deprecated</h2>
+                        <p>
+                            The three-letter <strong>.htm</strong> file extension is a legacy from early computing systems that had limitations on file extension length (like DOS with its 8.3 filename convention).
+                        </p>
+                        
+                        <ul>
+                            <li><strong>Server Configuration:</strong> Modern web servers are typically configured to prioritize .html files</li>
+                            <li><strong>Modern Standards:</strong> Current web standards favor the four-letter <strong>.html</strong> extension</li>
+                            <li><strong>Clarity:</strong> .html more clearly indicates the file type as HyperText Markup Language</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="index.html" class="button button-primary">Go to index.html manually</a>
+                    
+                    <div class="server-info">
+                        <p>This page will redirect automatically.</p>
+                        <div class="countdown" id="countdown" style="display: none;">Redirecting in 30 seconds...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Hide the JS disabled block immediately when JavaScript runs
         document.getElementById('jsDisabled').style.display = 'none';
-        
-        // Set the redirect delay in seconds
-        let seconds = 80;
-        
-        // Find the meta refresh tag and update it to prevent double redirect
+        document.getElementById('countdown').style.display = 'block';
+
+        let seconds = 60000;
         let metaTag = document.querySelector('meta[http-equiv="refresh"]');
-        if (!metaTag)
-        {
+        if (!metaTag) {
             metaTag = document.createElement('meta');
             metaTag.httpEquiv = 'refresh';
             document.head.appendChild(metaTag);
         }
-
-        metaTag.content = `${seconds};url=index.html`;
+        metaTag.content = `${seconds/1000};url=index.html`;
         
-        // Countdown and redirect functionality
         const countdownElement = document.getElementById('countdown');
-        
+        countdownElement.textContent = `Redirecting in ${seconds/1000} seconds...`;
+
         const countdown = setInterval(() => {
-            seconds--;
-            countdownElement.textContent = `Redirecting in ${seconds} seconds...`;
-            
+            seconds = seconds - 1000;
+            countdownElement.textContent = `Redirecting in ${seconds/1000} seconds...`;
             if (seconds <= 0) {
                 clearInterval(countdown);
                 window.location.href = 'index.html';
             }
         }, 1000);
         
-        // Try to redirect (in case of loop error)
-        setTimeout(() => { clearInterval(countdown); window.location.replace('index.html'); }, seconds*1000);
+        setTimeout(() => {
+            clearInterval(countdown);
+            window.location.replace('index.html');
+        }, seconds);
     </script>
 </body>
 </html>

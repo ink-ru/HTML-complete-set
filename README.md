@@ -16,7 +16,14 @@ Alieses for comfort usage
 ```bash
 echo "export PATH='${HOME}/.local/share/gem/ruby/3.3.0/bin/bin:$PATH'" >> ~/.bashrc
 echo "alias slim='${HOME}/.local/share/gem/ruby/3.3.0/bin/slimrb -p'" >> ~/.bashrc
+source ~/.bashrc
 # or for global instalation
 echo "export PATH='$(gem environment gemdir)/bin:$PATH'" >> /etc/bash.bashrc
 echo "alias  slim='$(gem environment gemdir)/bin/slimrb -p'" >> /etc/bash.bashrc
+source /etc/bash.bashrc
 ```
+
+Now you can use short construction:
+`slim ./index.html.slim > index.html`
+
+Git of Slim - https://github.com/slim-template/slim

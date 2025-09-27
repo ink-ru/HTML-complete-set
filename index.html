@@ -1,21 +1,147 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Slim Examples</title>
-    <meta content="template language" name="keywords" />
-    <!--https://necolas.github.io/normalize.css/--><!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">--><!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">-->
+    <title>All HTML tags</title>
+    <meta charset="UTF-8" />
+    <meta content="HTML tags and markup examples" name="description" />
+    <meta content="HTML tags template" name="keywords" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="3000" http-equiv="refresh" />
+    <meta content="slimrb" name="generator" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <!--<link rel="me" href="example.com" />-->
+    <link href="https://github.com/ink-ru" rel="author" />
+    <!--Open Graph-->
+    <meta content="article" property="og:type" />
+    <meta content="Github" property="og:site_name" />
+    <meta content="HTML tags" property="og:title" />
+    <meta content="List of all HTML tags — HTML boilerplate" property="og:description" />
+    <meta content="/index.html" property="og:url" />
+    <meta content="ru_RU" property="og:locale" />
+    <meta content="/assets/img/cloud.png" property="og:image" />
+    <meta content="2322" property="og:image:width" />
+    <meta content="1422" property="og:image:height" />
+    <link href="https://github.com/ink-ru/HTML-complete-set/blob/main/README.md" media="print" rel="alternate" />
+    <link href="./ru/index.html" hreflang="ru" rel="alternate" />
+    <link href="./index.html" hreflang="x-default" rel="alternate" />
+    <link href="" rel="canonical" />
+    <link rel="pingback" href="http://example.com/pingback">
+    <link href="/manifest.json" rel="manifest" />
+    <!---->
+    <link href="/help.html" rel="help" />
+    <link href="/license.html" rel="license" />
+    <link href="/table-of-contents.html" rel="contents" />
+    <link href="/index.html" rel="index" />
+    <link href="/glossary.html" rel="glossary" />
+    <link href="/start.html" rel="start" />
+    <link href="/next-page.html" rel="next" />
+    <link href="/previous-page.html" rel="prev" />
+    <link href="/search.html" rel="search" />
+    <link href="/terms-of-service.html" rel="terms-of-service" />
+    <link href="/privacy-policy.html" rel="privacy-policy" />
+    <!--<link rel="preconnect" href="https://cdnjs.cloudflare.com">--><!--=== Favicons ===-->
+    <link href="/assets/img/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/assets/img/icons/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png" />
+    <link href="/assets/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/assets/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <!--=== Styles ===--><!--https://necolas.github.io/normalize.css/--><!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" defer />--><!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" defer />-->
+    <link href="./assets/styles/style.css" rel="stylesheet" />
+    <!--=== Javascript ===-->
     <script>
-      alert('Slim supports embedded javascript!')
+      console.info('Slim supports embedded javascript!')
+    </script>
+    <script type="application/ld+json">
+      |
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "List of all HTML tags — HTML boilerplate",
+        "image": [
+          "/assets/img/cloud.png"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "George Wise"
+        },
+        "description": "A comprehensive guide to HTML"
+      }
     </script>
   </head>
   <body>
-    <h1>
-      Markup examples
-    </h1>
-    <div id="content">
+    <input id="menu-toggle" type="checkbox" /><input id="aside-toggle" type="checkbox" />
+    <header>
+      <label class="menu-toggle" for="menu-toggle">☰</label>
+      <h1>
+        Заголовок сайта
+      </h1>
+    </header>
+    <nav class="nav-menu">
+      <div class="nav-content">
+        <ul>
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="#">О нас</a>
+          </li>
+          <li>
+            <a href="#">Услуги</a>
+          </li>
+          <li>
+            <a href="#">Портфолио</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="content-block">
+        <h1>
+          HTML tags and markup examples
+        </h1>
+        <p>
+          To render HTML you can use Slim, Haml, Pug, Jade and other template parsers
+        </p>
+        <br />
+        <p>
+          Это основная область контента. Она занимает всю доступную ширину и высоту.
+        </p>
+        <p>
+          При нажатии на кнопку "☰" слева появляется меню, при нажатии на стрелочку справа - боковая панель.
+        </p>
+      </div>
+      <div class="content-block">
+        <h3>
+          Дополнительная информация
+        </h3>
+        <p>
+          Контент автоматически прокручивается при необходимости, но общих полос прокрутки у страницы нет.
+        </p>
+        <p>
+          Чтобы закрыть меню или боковую панель, нажмите на затемненную область.
+        </p>
+      </div>
+    </main><!--Кнопка открытия боковой панели--><label class="aside-toggle" for="aside-toggle">▶</label>
+    <aside>
+      <h2>
+        Боковая панель
+      </h2>
       <p>
-        To render HTML you can use Slim, Haml, Pug, Jade and other template parsers
+        Это выдвижная панель с дополнительной информацией.
       </p>
+      <div class="content-block">
+        <h3>
+          Информация
+        </h3>
+        <p>
+          Здесь может быть различный контент: настройки, уведомления, дополнительная информация.
+        </p>
+      </div>
+    </aside>
+    <div class="overlay">
+      <label class="overlay-close" for="menu-toggle"></label><label class="overlay-close" for="aside-toggle"></label>
     </div>
   </body>
 </html>

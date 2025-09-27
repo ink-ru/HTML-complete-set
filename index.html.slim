@@ -1,20 +1,147 @@
+- title = 'All HTML tags'
+- heading = "HTML tags and markup examples"
+
+/ Full list here - https://www.iana.org/assignments/link-relations/link-relations.xhtml
+- meta_rels = [{tag: 'link', rel:'alternate', href: 'https://github.com/ink-ru/HTML-complete-set/blob/main/README.md', media:'print'},
+{tag: 'link', rel:'alternate'}]
+
+- items = [{name: 'Calculator', price: 10, available: true},
+{name: 'Note Pad', price: 2.5, available: false},
+{name: 'Pen', price: 6, available: true}]
+
 doctype html
 html
   head
-    title Slim Examples
-    meta name="keywords" content="template language"
-    / meta name="author" content=author
-    / link rel="icon" type="image/png" href=file_path("favicon.png")
+    title= title
+    meta charset="UTF-8"
+  	meta name="description" content="HTML tags and markup examples"
+    meta name="keywords" content="HTML tags template"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta http-equiv="refresh" content="3000"
+    meta name="generator" content="slimrb"
+
+    meta http-equiv="content-type" content="text/html; charset=UTF-8"
+
+    /! <link rel="me" href="example.com" />
+    link rel="author"    href="https://github.com/ink-ru"
+
+    /! Open Graph
+    meta property="og:type" content="article"
+	meta property="og:site_name" content="Github"
+	meta property="og:title" content="HTML tags"
+	meta property="og:description" content="List of all HTML tags — HTML boilerplate"
+	meta property="og:url" content="/index.html"
+	meta property="og:locale" content="ru_RU"
+	meta property="og:image" content="/assets/img/cloud.png"
+	meta property="og:image:width" content="2322"
+	meta property="og:image:height" content="1422"
+
+    link rel="alternate" href="https://github.com/ink-ru/HTML-complete-set/blob/main/README.md" media="print"
+    link rel="alternate" href="./ru/index.html" hreflang="ru"
+    link rel="alternate" href="./index.html"    hreflang="x-default"
+    
+    link rel="canonical" href=""
+	<link rel="pingback" href="http://example.com/pingback">
+
+	link rel="manifest" href="/manifest.json"
+    /! 
+    link href="/help.html" rel="help"
+    link href="/license.html" rel="license"
+    link href="/table-of-contents.html" rel="contents"
+    link href="/index.html" rel="index"
+    link href="/glossary.html" rel="glossary"
+    link href="/start.html" rel="start"
+    link href="/next-page.html" rel="next"
+    link href="/previous-page.html" rel="prev"
+    link href="/search.html" rel="search"
+    link href="/terms-of-service.html" rel="terms-of-service"
+    link href="/privacy-policy.html" rel="privacy-policy"
+
+    /! <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    /! === Favicons ===
+    link rel="apple-touch-icon"      sizes="180x180" href="/assets/img/icons/apple-touch-icon.png"
+    link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icons/android-chrome-192x192.png"
+	link rel="icon" type="image/png" sizes="32x32"   href="/assets/img/icons/favicon-32x32.png"
+	link rel="icon" type="image/png" sizes="16x16"   href="/assets/img/icons/favicon-16x16.png"
+    
+    /! === Styles ===
     /! https://necolas.github.io/normalize.css/
-    /! <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
-    /! <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    /! <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" defer />
+    /! <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" defer />
+    link rel="stylesheet" href="./assets/styles/style.css"
+
+    /! === Javascript ===
     javascript:
-      alert('Slim supports embedded javascript!')
+      console.info('Slim supports embedded javascript!')
+
+    script type="application/ld+json" |
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Article",
+		  "headline": "List of all HTML tags — HTML boilerplate",
+		  "image": [
+		    "/assets/img/cloud.png"
+		  ],
+		  "author": {
+		    "@type": "Person",
+		    "name": "George Wise"
+		  },
+		  "description": "A comprehensive guide to HTML"
+		}
 
   body
-    h1 Markup examples
+  	input type="checkbox" id="menu-toggle"
+	input type="checkbox" id="aside-toggle"
 
-    #content
-      p To render HTML you can use Slim, Haml, Pug, Jade and other template parsers
+	header
+	  label.menu-toggle for="menu-toggle" ☰
+	  h1 Заголовок сайта
+
+	nav.nav-menu
+	  .nav-content
+	    ul
+	      li
+	        a href="#" Главная
+	      li
+	        a href="#" О нас
+	      li
+	        a href="#" Услуги
+	      li
+	        a href="#" Портфолио
+	      li
+	        a href="#" Контакты
+
+	main
+	  .content-block
+	    h1= heading
+	    p To render HTML you can use Slim, Haml, Pug, Jade and other template parsers
+	    br
+	    p Это основная область контента. Она занимает всю доступную ширину и высоту.
+	    p При нажатии на кнопку "☰" слева появляется меню, при нажатии на стрелочку справа - боковая панель.
+	  
+	  .content-block
+	    h3 Дополнительная информация
+	    p Контент автоматически прокручивается при необходимости, но общих полос прокрутки у страницы нет.
+	    p Чтобы закрыть меню или боковую панель, нажмите на затемненную область.
+
+	/! Кнопка открытия боковой панели
+	label.aside-toggle for="aside-toggle" ▶
+
+	aside
+	  h2 Боковая панель
+	  p Это выдвижная панель с дополнительной информацией.
+	  .content-block
+	    h3 Информация
+	    p Здесь может быть различный контент: настройки, уведомления, дополнительная информация.
+
+	.overlay
+	  label.overlay-close for="menu-toggle"
+	  label.overlay-close for="aside-toggle"
+
+
+
+
+
 
 
