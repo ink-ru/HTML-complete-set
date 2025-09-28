@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+	Back End Developers: George Wise
+
+/* THANKS */
+	George Wise
+
+/* SITE */
+	Standards: HTML5, CSS3, W3C (as much as possible)
+	Core: Slimrb, Python 3
+	Components: jQuery
+	Software: SASS, Sublime Text, Terminal, Adobe CS, Made on Linux
+	Hardware Stack: Ubuntu 22.04, Postgresql 9.x, Nginx, uwsgi
+	Helpers: Haystack, Pipeline
