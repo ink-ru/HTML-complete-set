@@ -16,7 +16,7 @@ html
     meta charset="UTF-8"
   	meta name="description" content="HTML tags and markup examples"
     meta name="keywords" content="HTML tags template"
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=0.5, maximum-scale=2"
     meta http-equiv="refresh" content="3000"
     meta name="generator" content="slimrb"
 
@@ -50,7 +50,7 @@ html
     link href="/table-of-contents.html" rel="contents"
     link href="/index.html" rel="index"
     link href="/glossary.html" rel="glossary"
-    link href="/start.html" rel="start"
+    link href="/start.html" rel="start"; /! last
     link href="/next-page.html" rel="next"
     link href="/previous-page.html" rel="prev"
     link href="/search.html" rel="search"
@@ -89,6 +89,8 @@ html
 		  },
 		  "description": "A comprehensive guide to HTML"
 		}
+
+	base target="_self"
 
   body
   	input type="checkbox" id="menu-toggle"

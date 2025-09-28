@@ -1,7 +1,174 @@
+# Office Documents
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.ppt
+*.pptx
+*.odt
+*.ods
+*.odp
+
+# Database files
+*.db
+*.sql
+*.sqlite
+*.sqlite3
+*.mdb
+
+# SQL Dumps
+*.dump
+*.backup
+*.bak
+*_backup.sql
+*_backup.sql.gz
+backup_*.sql
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+*.jar
+
+# Data files
+*.csv
+*.tsv
+*.json
+*.xml
+*.xlsx
+*.xls
+*.pdf
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+*-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+env/
+venv/
+.venv/
+
+# IDE files (optional but recommended)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Diagnostic reports
+report.*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for coverage instruments
+lib-cov
+coverage
+*.lcov
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Utilites
+.grunt
+bower_components
+.lock-wscript
+build/Release
+.yarn-integrity
+
+# Next.js
+.next
+out
+.nuxt
+dist
+
+# vuepress build output
+.vuepress/dist
+
+# Cache
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.cache
+.parcel-cache
+.node_repl_history
+.cache/
+.temp
+.cache
+.yarn/cache
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
-*.log
 *.lot
 *.fls
 *.out
@@ -16,13 +183,6 @@
 *.dvi
 *.xdv
 *-converted-to.*
-# these rules might exclude image files for figures etc.
-# *.ps
-# *.eps
-# *.pdf
-
-## Generated if empty string is given at "Please type another file name for output:"
-.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -115,9 +275,6 @@ acs-*.bib
 *.slo
 *.sls
 
-# uncomment this for glossaries-extra (will ignore makeindex's style files!)
-# *.ist
-
 # gnuplot
 *.gnuplot
 *.table
@@ -140,12 +297,6 @@ acs-*.bib
 
 # hyperref
 *.brf
-
-# knitr
-*-concordance.tex
-# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
-# *.tikz
-*-tikzDictionary
 
 # listings
 *.lol
@@ -196,9 +347,6 @@ _minted*
 # scrwfile
 *.wrt
 
-# svg
-svg-inkscape/
-
 # sympy
 *.sout
 *.sympy
@@ -211,17 +359,6 @@ sympy-plots-for-*.tex/
 # pythontex
 *.pytxcode
 pythontex-files-*/
-
-# tcolorbox
-*.listing
-
-# thmtools
-*.loe
-
-# TikZ & PGF
-*.dpth
-*.md5
-*.auxlock
 
 # titletoc
 *.ptc
@@ -267,9 +404,6 @@ TSWLatexianTemp*
 # LyX
 *.lyx~
 
-# Kile
-*.backup
-
 # gummi
 .*.swp
 
@@ -291,11 +425,3 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
-
-# xwatermark package
-*.xwm
-
-# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
-# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
-# Uncomment the next line to have this generated file ignored.
-#*Notes.bib
